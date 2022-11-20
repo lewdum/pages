@@ -1,3 +1,4 @@
+// From https://texteditor.com/multiline-text-art/ (Blackie)
 const logo = `
                                           ▄▄
 ▀████▀                                  ▀███

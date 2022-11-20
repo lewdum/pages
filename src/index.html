@@ -16,10 +16,13 @@
 
 <body x-data class="bg-black text-white font-mono text-lg">
 	<main class="min-h-screen flex flex-col">
-		<div class="flex-1 flex flex-col relative">
-			<ul class="flex flex-col justify-end flex-1 absolute top-0 right-0 bottom-0 left-0 px-4 py-2">
+		<div class="flex-1 flex flex-col relative overflow-hidden">
+			<ul class="
+				flex flex-col justify-end flex-1 absolute top-0 right-0 bottom-0 left-0 px-4 py-2
+			">
 				<template x-for="message in $store.terminal.output">
-					<li x-text="message.text" class="text-gray-300 flex-shrink-0 whitespace-pre leading-snug" :class="{
+					<li x-text="message.text" class="text-gray-300 flex-shrink-0 leading-snug whitespace-pre-wrap break-words"
+						:class="{
 							'h-4': message.kind === 'separator',
 							'text-blue-400 font-semibold': message.kind === 'command',
 							'text-sm leading-[1.2] tracking-tighter font-logo text-pink-400': message.kind === 'banner',
