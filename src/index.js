@@ -20,7 +20,7 @@ document.addEventListener('alpine:init', () => {
 
 		tree: {
 			'hello.txt': `
-				hello I am testing the file system
+				hello I am testing the file system :)
 			`,
 			'hello.exe'(args) {
 				this.echo('hi. you passed these arguments:')
@@ -29,6 +29,10 @@ document.addEventListener('alpine:init', () => {
 		},
 
 		commands: {
+			echo(args) {
+				this.echo(args.join(' '))
+			},
+
 			enter(args) {
 				if (args.length !== 1) {
 					this.echo('expected exactly 1 argument')
@@ -59,18 +63,46 @@ document.addEventListener('alpine:init', () => {
 				this.runCommand('here')
 			},
 
-			logo(args) {
-				this.echo(logo)
-				this.echo('welcome to termlewd v1.02.501 · lewd/OS 22 · lewdum inc')
-				// this.echo('copyright 2022 @lewdum@tech.lgbt · all rights reserved')
-			},
-
 			list(args) {
 				const dir = this.here()
 				for (const key in dir) {
 					if (Object.hasOwnProperty.call(dir, key)) {
 						this.echo(key)
 					}
+				}
+			},
+
+			logo(args) {
+				this.echo(logo)
+				this.echo('welcome to termlewd v1.02.501 · lewd/OS 22 · lewdum inc')
+				// this.echo('copyright 2022 @lewdum@tech.lgbt · all rights reserved')
+			},
+
+			loop(args) {
+				if (args.length < 1) {
+					this.echo('expected at least 1 argument')
+					return
+				}
+				const head = args[0]
+				const headCount = parseInt(head, 10)
+				if (Number.isNaN(headCount)) {
+					this.echo('invalid iterator')
+					return
+				}
+				if (headCount > 100) {
+					this.echo('loop count too high')
+					return
+				}
+				if (args.length < 2) {
+					this.echo('missing command')
+					return
+				}
+				if (args[1] === 'loop') {
+					this.echo('invalid command')
+					return
+				}
+				for (let i = 0; i < headCount; i++) {
+					this.runCommand(args[1], [args.slice(2)])
 				}
 			},
 
