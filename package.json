@@ -4,8 +4,8 @@
   "author": "lewdum",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i src/index.css -o build/index.css",
-    "dev": "tailwindcss -i ./src/index.css -o ./build/index.css --watch"
+    "build": "tailwindcss -i ./src/index.css -o ./public/index.css",
+    "dev": "tailwindcss -i ./src/index.css -o ./public/index.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
