@@ -105,7 +105,7 @@ document.addEventListener('alpine:init', () => {
 					return
 				}
 				for (let i = 0; i < headCount; i++) {
-					this.runCommand(args[1], [args.slice(2)])
+					this.runCommand(args[1], args.slice(2))
 				}
 			},
 
