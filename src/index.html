@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lewdum.out</title>
+
+	<link rel="stylesheet" href="../build/index.css">
+
+	<script defer src="../src/index.js"></script>
+
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data class="bg-black text-white font-mono text-lg">
+	<main class="min-h-screen flex flex-col">
+		<div class="flex-1 flex flex-col relative">
+			<ul class="flex flex-col justify-end flex-1 absolute top-0 right-0 bottom-0 left-0 px-4 py-2">
+				<template x-for="message in $store.terminal.output">
+					<li x-text="message.text" class="text-gray-300 flex-shrink-0 whitespace-pre leading-snug" :class="{
+							'h-4': message.kind === 'separator',
+							'text-blue-400 font-semibold': message.kind === 'command',
+							'text-sm leading-[1.2] tracking-tighter font-logo text-pink-400': message.kind === 'banner',
+						}">
+					</li>
+				</template>
+			</ul>
+		</div>
+
+		<input type="text" autofocus placeholder="type a command and press ENTER to run it" x-ref="input"
+			x-model="$store.terminal.input" @keydown.enter="$store.terminal.run()" class="
+			bg-transparent text-current border-t border-slate-600 px-4 py-2 outline-none
+		">
+	</main>
+</body>
+
+</html>
