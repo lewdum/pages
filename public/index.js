@@ -65,11 +65,14 @@ document.addEventListener('alpine:init', () => {
 
 			list(args) {
 				const dir = this.here()
+				const files = []
 				for (const key in dir) {
 					if (Object.hasOwnProperty.call(dir, key)) {
-						this.echo(key)
+						files.push(key)
 					}
 				}
+				files.sort()
+				files.forEach(file => this.echo(file))
 			},
 
 			logo(args) {
