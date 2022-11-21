@@ -40,8 +40,12 @@ document.addEventListener('alpine:init', () => {
 					return
 				}
 				const full = args.join(' ')
-				const result = eval(full)
-				this.echo(`result: ${result}`)
+				try {
+					const result = eval(full)
+					this.echo(`result: ${result}`)
+				} catch (err) {
+					this.echo(`${err}`)
+				}
 			},
 
 			echo(args) {
