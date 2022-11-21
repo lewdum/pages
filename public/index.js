@@ -146,6 +146,24 @@ document.addEventListener('alpine:init', () => {
 			},
 		},
 
+		completions() {
+			const clean = this.input.trim()
+			if (clean === '') {
+				// FIXME: So the browser doesn't show completions immediately.
+				return []
+			}
+			const parts = clean.split(/\s+/)
+			const endsInSpace = this.input.at(-1) === ' '
+			if (parts.length <= 1 && !endsInSpace) {
+				return Object.keys(this.commands)
+			}
+			let prefix = this.input
+			if (!endsInSpace) {
+				prefix = parts.slice(0, parts.length - 1).join(' ') + ' '  // TODO
+			}
+			return Object.keys(this.here()).map(file => `${prefix}${file}`)
+		},
+
 		run() {
 			const clean = this.input.trim()
 			this.echo(`$ ${clean}`)

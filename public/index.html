@@ -36,9 +36,9 @@
 			">
 				<template x-for="message in $store.terminal.output">
 					<li x-text="message.text" class="
-						flex-shrink-0 leading-snug whitespace-pre-wrap break-words lowercase
+						flex-shrink-0 leading-snug whitespace-pre-wrap break-words
 					" :class="{
-							'neon-white': message.kind === 'normal',
+							'neon-white lowercase': message.kind === 'normal',
 							'h-4': message.kind === 'separator',
 							'text-blue-400 font-semibold neon-blue': message.kind === 'command',
 							'leading-[1.1] tracking-tighter font-logo text-pink-400 neon-pink hidden sm:block': message.kind === 'banner',
@@ -48,11 +48,18 @@
 			</ul>
 		</div>
 
-		<input type="text" autofocus placeholder="type a command and press enter to run it" x-ref="input"
-			x-model="$store.terminal.input" @keydown.enter="$store.terminal.run()" class="
+		<input type="text" autofocus autocomplete="off" list="completions"
+			placeholder="type a command and press enter to run it" x-ref="input" x-model="$store.terminal.input"
+			@keydown.enter="$store.terminal.run()" class="
 			bg-transparent text-current border-t border-slate-600 px-4 py-2 outline-none
 			placeholder-transparent sm:placeholder-slate-600
 		">
+
+		<datalist id="completions">
+			<template x-for="completion in $store.terminal.completions()">
+				<option :value="completion" />
+			</template>
+		</datalist>
 	</main>
 </body>
 
