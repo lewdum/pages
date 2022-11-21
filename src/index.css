@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +9,18 @@
 	[x-cloak] {
 		display: none !important;
 	}
+}
+
+@layer utilities {
+	/* .neon-white {
+		text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+	}
+
+	.neon-blue {
+		text-shadow: 0 0 3px rgba(96, 165, 250, 0.6);
+	}
+
+	.neon-pink {
+		text-shadow: 0 0 3px rgba(244, 114, 182, 0.6);
+	} */
 }

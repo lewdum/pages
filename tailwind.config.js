@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        mono: '"Major Mono Display", monospace',
         logo: '"Courier New", Courier, monospace',
       }
     },
