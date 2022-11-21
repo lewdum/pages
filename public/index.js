@@ -169,9 +169,13 @@ document.addEventListener('alpine:init', () => {
 			const endsInSpace = this.input.at(-1) === ' '
 			if (parts.length <= 1 && !endsInSpace) {
 				const partial = parts[0]
-				return Object
+				const valid = Object
 					.keys(this.commands)
 					.filter(cmd => cmd.startsWith(partial))
+				if (valid.length === 1 && valid[0] === partial) {
+					return []
+				}
+				return valid
 			}
 			let prefix = this.input
 			let partial = ''
