@@ -34,6 +34,16 @@ document.addEventListener('alpine:init', () => {
 		},
 
 		commands: {
+			calc(args) {
+				if (args.length < 1) {
+					this.echo('expected at least 1 argument')
+					return
+				}
+				const full = args.join(' ')
+				const result = eval(full)
+				this.echo(`result: ${result}`)
+			},
+
 			echo(args) {
 				this.echo(args.join(' '))
 			},
@@ -95,8 +105,8 @@ document.addEventListener('alpine:init', () => {
 			},
 
 			loop(args) {
-				if (args.length < 1) {
-					this.echo('expected at least 1 argument')
+				if (args.length < 2) {
+					this.echo('expected at least 2 arguments')
 					return
 				}
 				const head = args[0]
@@ -107,10 +117,6 @@ document.addEventListener('alpine:init', () => {
 				}
 				if (headCount > 100) {
 					this.echo('loop count too high')
-					return
-				}
-				if (args.length < 2) {
-					this.echo('missing command')
 					return
 				}
 				if (args[1] === 'loop') {
@@ -169,13 +175,10 @@ document.addEventListener('alpine:init', () => {
 			const endsInSpace = this.input.at(-1) === ' '
 			if (parts.length <= 1 && !endsInSpace) {
 				const partial = parts[0]
-				const valid = Object
+				return Object
 					.keys(this.commands)
 					.filter(cmd => cmd.startsWith(partial))
-				if (valid.length === 1 && valid[0] === partial) {
-					return []
-				}
-				return valid
+					.map(cmd => `${cmd} `)
 			}
 			let prefix = this.input
 			let partial = ''
@@ -186,17 +189,14 @@ document.addEventListener('alpine:init', () => {
 			const valid = Object
 				.keys(this.here())
 				.filter(file => file.startsWith(partial))
-			if (valid.length === 1 && valid[0] === partial) {
-				return []
-			}
-			return valid.map(file => `${prefix}${file}`)
+			return valid.map(file => `${prefix}${file} `)
 		},
 
 		run() {
 			const clean = this.input.trim()
 			this.echo(`$ ${clean}`)
 			if (clean !== '') {
-				const parts = this.input.split(/\s+/)
+				const parts = clean.split(/\s+/)
 				if (parts.length > 0) {
 					const [cmd, ...args] = parts
 					this.runCommand(cmd, args)
