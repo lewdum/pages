@@ -26,6 +26,11 @@ document.addEventListener('alpine:init', () => {
 				this.echo('hi. you passed these arguments:')
 				args.forEach(arg => this.echo(`- ${arg}`))
 			},
+			test: {
+				'test.txt': `
+					please ignore me, I am shy (///∇///)
+				`,
+			},
 		},
 
 		commands: {
@@ -38,13 +43,21 @@ document.addEventListener('alpine:init', () => {
 					this.echo('expected exactly 1 argument')
 					return
 				}
+				const file = this.hereFile(args[0])
+				if (file === undefined) {
+					this.echo('directory not found')
+					return
+				}
+				if (typeof file !== 'object' || file._special !== undefined) {
+					this.echo('not a directory')
+					return
+				}
 				this.current = [...this.current, args[0]]
 				this.runCommand('here')
 			},
 
 			help(args) {
 				this.echo('available commands:')
-
 				const all = Object.keys(this.commands)
 				all.sort()
 				all.forEach(cmd => this.echo(`- ${cmd}`))
