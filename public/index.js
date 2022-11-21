@@ -168,13 +168,24 @@ document.addEventListener('alpine:init', () => {
 			const parts = clean.split(/\s+/)
 			const endsInSpace = this.input.at(-1) === ' '
 			if (parts.length <= 1 && !endsInSpace) {
-				return Object.keys(this.commands)
+				const partial = parts[0]
+				return Object
+					.keys(this.commands)
+					.filter(cmd => cmd.startsWith(partial))
 			}
 			let prefix = this.input
+			let partial = ''
 			if (!endsInSpace) {
 				prefix = parts.slice(0, parts.length - 1).join(' ') + ' '  // TODO
+				partial = parts.at(-1)
 			}
-			return Object.keys(this.here()).map(file => `${prefix}${file}`)
+			const valid = Object
+				.keys(this.here())
+				.filter(file => file.startsWith(partial))
+			if (valid.length === 1 && valid[0] === partial) {
+				return []
+			}
+			return valid.map(file => `${prefix}${file}`)
 		},
 
 		run() {
