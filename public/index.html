@@ -50,7 +50,7 @@
 
 		<input type="text" autofocus autocomplete="off" list="completions"
 			placeholder="type a command and press enter to run it" x-ref="input" x-model="$store.terminal.input"
-			@keydown.enter="$store.terminal.run()" class="
+			@keydown.enter="$store.terminal.run()" @keydown.tab="$event.preventDefault()" class="
 			bg-transparent text-current border-t border-slate-600 px-4 py-2 outline-none
 			placeholder-transparent sm:placeholder-slate-600
 		">
