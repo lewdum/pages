@@ -1,1 +1,28 @@
-<!-- Put your global macros here. -->
+{%- macro link(label, href) -%}
+<a href="{{ href | safe }}" class="text-yellow-400 hover:underline">
+	{{- label -}}
+</a>
+{%- endmacro link -%}
+
+{%- macro ext_link(label, href) -%}
+<a href="{{ href | safe }}" class="text-yellow-400 hover:underline" target="_blank" rel="noreferrer noopener">
+	{{- label -}}
+</a>
+{%- endmacro ext_link -%}
+
+{%- macro emoji(name, alt="") -%}
+<img src="emoji/{{name}}.webp" alt="{{ alt }}" class="inline h-[1.1em] pb-[1px]">
+{%- endmacro ext_link -%}
+
+{%- macro raw_emoji_item(name, alt="") -%}
+<span class="mr-2">
+	{{- self::emoji(name=name, alt=alt) -}}
+</span>
+{%- endmacro raw_emoji_item -%}
+
+{%- macro emoji_item(label, emoji, alt="") -%}
+<li>
+	{{ self::raw_emoji_item(name=emoji, alt=alt) }}
+	{{- label | safe -}}
+</li>
+{%- endmacro emoji_item -%}

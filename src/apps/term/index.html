@@ -14,7 +14,7 @@
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data class="bg-slate-900 text-white font-mono text-sm lg:text-lg">
+<body x-data class="bg-slate-900 text-white font-term-mono text-sm lg:text-lg">
 	<div class="fixed top-3 lg:top-4 right-4 lg:right-8 z-10 bg-black bg-opacity-80 p-2">
 		<a href="https://tech.lgbt/@lewdum" target="_blank" rel="noopener noreferrer me"
 			class="inline-block underline hover:text-blue-400">
@@ -41,7 +41,7 @@
 							'neon-white lowercase': message.kind === 'normal',
 							'h-4': message.kind === 'separator',
 							'text-blue-400 font-semibold neon-blue': message.kind === 'command',
-							'leading-[1.1] tracking-tighter font-logo text-pink-400 neon-pink hidden sm:block': message.kind === 'banner',
+							'leading-[1.1] tracking-tighter font-term-logo text-pink-400 neon-pink hidden sm:block': message.kind === 'banner',
 						}">
 					</li>
 				</template>

@@ -1,5 +1,136 @@
 {% extends "layout.html" %}
 
 {%- block body -%}
-<h1>Hello, {{ name }}!</h1>
+
+<div class="space-y-6">
+	<div class="mx-auto max-w-3xl">
+		<h1 class="text-6xl font-bold mb-8 text-center">
+			hi :)
+		</h1>
+
+		<p class="bg-black bg-opacity-40 p-4">
+			I am Lewdum from the internets. you may know me for... nothing.
+			I spend my time making things that nobody will ever use.
+			I have also dropped out of college 3 or 4 times (I've lost count by now).
+			let's play games or some shit, who cares.
+		</p>
+	</div>
+
+	<div class="
+		flex flex-col justify-center gap-6 mx-auto max-w-3xl
+		lg:flex-row lg:items-start lg:max-w-none
+	">
+		<div class="flex flex-col gap-6">
+			<div class="bg-black bg-opacity-40 p-4">
+				<h2 class="text-2xl font-bold mb-4">
+					identity
+				</h2>
+				<ul class="space-y-1">
+					{{- macros::emoji_item(label="probably agender (they/them)", emoji="agender_flag") -}}
+					{{- macros::emoji_item(label="probably asexual, or at least gray-ace", emoji="asexual_flag") -}}
+					{{- macros::emoji_item(label="probably ADHD, inattentive-type", emoji="surprised") -}}
+					{{- macros::emoji_item(label="anarcho-communist", emoji="black_flag") -}}
+				</ul>
+			</div>
+
+			<div class="bg-black bg-opacity-40 p-4">
+				<h2 class="text-2xl font-bold mb-4">
+					activities
+				</h2>
+				<ul class="space-y-1">
+					{{- macros::emoji_item(label="coding random shit in rust", emoji="crt_prompt") -}}
+					{{- macros::emoji_item(label="studying japanese", emoji="shinto_shrine") -}}
+					{{- macros::emoji_item(label="reverse engineering games", emoji="wrench") -}}
+					{{- macros::emoji_item(label="losing my marbles", emoji="crazy") -}}
+					{{- macros::emoji_item(label="eating pizza", emoji="pizza") -}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="bg-black bg-opacity-40 p-4">
+			<h2 class="text-2xl font-bold mb-4">
+				interests
+			</h2>
+			<ul class="space-y-1">
+				<li>
+					{{- macros::raw_emoji_item(name="crt_prompt") -}}
+					programming
+					<ul class="pl-4">
+						{{- macros::emoji_item(label="rust", emoji="arrow_right") -}}
+						{{- macros::emoji_item(label="go", emoji="arrow_right") -}}
+					</ul>
+				</li>
+				{{- macros::emoji_item(label="linguistics", emoji="speech_bubble") -}}
+				<li>
+					{{- macros::raw_emoji_item(name="tv") -}}
+					anime
+					<ul class="pl-4">
+						{{- macros::emoji_item(label="serial experiments lain", emoji="arrow_right") -}}
+						{{- macros::emoji_item(label="steins;gate", emoji="arrow_right") -}}
+						{{- macros::emoji_item(label="oregairu", emoji="arrow_right") -}}
+					</ul>
+				</li>
+				<li>
+					{{- macros::raw_emoji_item(name="tv") -}}
+					animation
+					<ul class="pl-4">
+						{{- macros::emoji_item(label="steven universe", emoji="arrow_right") -}}
+						{{- macros::emoji_item(label="cyberpunk edgerunners", emoji="arrow_right") -}}
+						{{- macros::emoji_item(label="arcane", emoji="arrow_right") -}}
+					</ul>
+				</li>
+				{{- macros::emoji_item(label="video games", emoji="gamepad") -}}
+				{{- macros::emoji_item(label="philosophy", emoji="thinking") -}}
+				{{- macros::emoji_item(label="music", emoji="music_note") -}}
+			</ul>
+		</div>
+
+		<div class="flex flex-col gap-6">
+			<div class="bg-black bg-opacity-40 p-4">
+				<h2 class="text-2xl font-bold mb-4">
+					links
+				</h2>
+				<ul class="space-y-1">
+					{{- macros::emoji_item(label=macros::ext_link(label="social", href="https://tech.lgbt/@lewdum"),
+					emoji="speech_bubble") -}}
+					{{- macros::emoji_item(label=macros::ext_link(label="source code", href="https://codeberg.org/lewdum"),
+					emoji="spiral_notebook") -}}
+				</ul>
+			</div>
+
+			<div class="bg-black bg-opacity-40 p-4">
+				<h2 class="text-2xl font-bold mb-4">
+					apps
+				</h2>
+				<ul class="space-y-1">
+					{{- macros::emoji_item(label=macros::link(label="termlewd (wip)", href="/apps/term"), emoji="crt_prompt")
+					-}}
+				</ul>
+			</div>
+
+			<img src="../assets/place_him2.png" alt="cute fat cat (?)" title="taken from https://remiiiiii.online/jammers/"
+				class="max-w-sm self-center">
+		</div>
+	</div>
+
+	<div class="mx-auto max-w-3xl space-y-4">
+		<div class="bg-black bg-opacity-40 p-4 text-center">
+			Built with
+			{{ macros::ext_link(label="Kurage", href="https://codeberg.org/lewdum/kurage") -}}
+			, my own static site generator.
+		</div>
+
+		<div class="bg-black bg-opacity-40 p-4 text-center">
+			<small>
+				Uses
+				{{ macros::ext_link(label="Mutant Standard emoji", href="https://mutant.tech") -}}
+				, which are licensed under a
+				{{ macros::ext_link(label="CC BY-NC-SA 4.0 International License",
+				href="https://creativecommons.org/licenses/by-nc-sa/4.0/") -}}
+				</a>.
+			</small>
+		</div>
+	</div>
+</div>
+
 {%- endblock body -%}
