@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './public/**/*.html',
-  ],
-  theme: {
+	content: [
+		'./build/**/*.{html,htm,js,ts,jsx,tsx}',
+	],
+	theme: {
     extend: {
       fontFamily: {
         mono: '"Major Mono Display", monospace',
@@ -11,5 +11,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+	plugins: [],
 }
