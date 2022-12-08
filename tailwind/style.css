@@ -14,7 +14,7 @@
 
 @layer components {
 	.trans {
-		background: rgb(49, 46, 129);
+		/* background: rgb(49, 46, 129); */
 		background: linear-gradient(135deg, rgba(49, 46, 129, 1) 0%, rgba(49, 46, 129, 1) 85%, rgba(89, 201, 244, 1) 85%, rgba(89, 201, 244, 1) 88%, rgba(241, 165, 181, 1) 88%, rgba(241, 165, 181, 1) 91%, rgba(255, 255, 255, 1) 91%, rgba(255, 255, 255, 1) 94%, rgba(241, 165, 181, 1) 94%, rgba(241, 165, 181, 1) 97%, rgba(89, 201, 244, 1) 97%, rgba(89, 201, 244, 1) 100%);
 	}
 }
