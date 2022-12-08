@@ -958,10 +958,6 @@ video {
     flex-direction: row;
   }
 
-  .lg\:p-4{
-    padding: 1rem;
-  }
-
   .lg\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
