@@ -13,12 +13,62 @@
 	{%- block head %}{%- endblock head %}
 </head>
 
-<body class="bg-indigo-900 text-indigo-100 font-ubuntu trans">
-	<main class="min-h-screen p-2 md:p-4">
-		{% block body %}
-		[MISSING BODY]
-		{% endblock body %}
-	</main>
+<body class="
+	bg-win-desktop text-win-box-text font-win
+	flex flex-col min-h-screen
+">
+	<!-- TODO: Make menu into desktop icons. -->
+
+	<header class="
+		flex p-[2px]
+		bg-win-box border-[2px]
+		border-t-win-box-border1
+		border-r-win-box-border2
+		border-b-win-box-border2
+	">
+		{{ macros::menu_link(label="Home", href="/") }}
+		{{ macros::menu_link(label="About", href="/about.html") }}
+		{{ macros::menu_link(label="Blog", href="/blog.html") }}
+		{{ macros::menu_link(label="Links", href="/links.html") }}
+	</header>
+
+	<div class="flex-1 flex flex-col justify-center items-center p-2">
+		<main class="
+			max-w-4xl
+			bg-win-box border-[2px]
+			border-t-win-box-border1
+			border-r-win-box-border2
+			border-b-win-box-border2
+			border-l-win-box-border1
+		">
+			<div class="bg-win-box-title text-white font-win-sys font-bold px-4 py-1">
+				{{ title }}
+			</div>
+
+			<div class="px-4 py-2">
+				{% block body %}
+				[MISSING BODY]
+				{% endblock body %}
+			</div>
+		</main>
+	</div>
+
+	<footer class="
+		text-center py-1
+		bg-win-box border-[2px]
+		border-t-win-box-border1
+		border-r-win-box-border2
+		border-b-win-box-border2
+	">
+		Built with
+		{{ macros::ext_link(label="Kurage", href="https://codeberg.org/lewdum/kurage") -}}
+		, my own free and open source static site generator. Uses
+		{{ macros::ext_link(label="Mutant Standard emoji", href="https://mutant.tech") -}}
+		, which are licensed under a
+		{{ macros::ext_link(label="BY-NC-SA 4.0 International License",
+		href="https://creativecommons.org/licenses/by-nc-sa/4.0/") -}}
+		.
+	</footer>
 </body>
 
 </html>

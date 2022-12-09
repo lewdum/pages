@@ -1,0 +1,61 @@
+{% extends "lib/layout.html" %}
+
+{%- block body -%}
+
+<!-- TODO: Separate into two windows. -->
+<!-- TODO: Or, even better, make it into Explorer. -->
+
+<div class="flex flex-col gap-8 p-4 sm:flex-row">
+	<div>
+		<h2 class="text-2xl font-bold mb-4">
+			interests
+		</h2>
+		<ul class="space-y-1">
+			<li>
+				{{- macros::raw_emoji_item(name="crt_prompt") -}}
+				programming
+				<ul class="pl-4">
+					{{- macros::emoji_item(label="rust", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="go", emoji="arrow_right") -}}
+				</ul>
+			</li>
+			{{- macros::emoji_item(label="linguistics", emoji="speech_bubble") -}}
+			<li>
+				{{- macros::raw_emoji_item(name="tv") -}}
+				anime
+				<ul class="pl-4">
+					{{- macros::emoji_item(label="serial experiments lain", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="steins;gate", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="oregairu", emoji="arrow_right") -}}
+				</ul>
+			</li>
+			<li>
+				{{- macros::raw_emoji_item(name="tv") -}}
+				animation
+				<ul class="pl-4">
+					{{- macros::emoji_item(label="steven universe", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="cyberpunk edgerunners", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="arcane", emoji="arrow_right") -}}
+				</ul>
+			</li>
+			{{- macros::emoji_item(label="video games", emoji="gamepad") -}}
+			{{- macros::emoji_item(label="philosophy", emoji="thinking") -}}
+			{{- macros::emoji_item(label="music", emoji="music_note") -}}
+		</ul>
+	</div>
+
+	<div>
+		<h2 class="text-2xl font-bold mb-4">
+			activities
+		</h2>
+		<ul class="space-y-1">
+			{{- macros::emoji_item(label="coding random shit in rust", emoji="crt_prompt") -}}
+			{{- macros::emoji_item(label="studying japanese", emoji="shinto_shrine") -}}
+			{{- macros::emoji_item(label="reverse engineering games", emoji="wrench") -}}
+			{{- macros::emoji_item(label="losing my marbles", emoji="crazy") -}}
+			{{- macros::emoji_item(label="eating pizza", emoji="pizza") -}}
+		</ul>
+	</div>
+</div>
+
+{%- endblock body -%}

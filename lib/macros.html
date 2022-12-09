@@ -1,25 +1,23 @@
 {%- macro link(label, href) -%}
-<a href="{{ href | safe }}" class="text-yellow-400 hover:bg-yellow-400 hover:text-black">
+<a href="{{ href | safe }}" class="underline text-win-box-title">
 	{{- label -}}
 </a>
 {%- endmacro -%}
 
 {%- macro ext_link(label, href) -%}
-<a href="{{ href | safe }}" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="noreferrer noopener">
+<a href="{{ href | safe }}" class="underline text-win-box-title" target="_blank" rel="noreferrer noopener">
 	{{- label -}}
 </a>
 {%- endmacro -%}
 
 {%- macro me_link(label, href) -%}
-<a href="{{ href | safe }}" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="me noreferrer noopener">
+<a href="{{ href | safe }}" class="underline text-win-box-title" target="_blank" rel="me noreferrer noopener">
 	{{- label -}}
 </a>
 {%- endmacro -%}
 
 {%- macro emoji(name, alt="") -%}
-<img src="emoji/{{name}}.webp" alt="{{ alt }}" class="inline h-[1.1em] pb-[1px]">
+<img src="emoji/{{name}}.webp" alt="{{ alt }}" class="inline -mt-[3px]" width="18" height="18">
 {%- endmacro -%}
 
 {%- macro raw_emoji_item(name, alt="") -%}
@@ -33,4 +31,10 @@
 	{{ self::raw_emoji_item(name=emoji, alt=alt) }}
 	{{- label | safe -}}
 </li>
+{%- endmacro -%}
+
+{%- macro menu_link(label, href) -%}
+<a href="{{ href }}" class="px-2 py-1 underline text-win-box-title">
+	{{ label }}
+</a>
 {%- endmacro -%}
