@@ -9,139 +9,93 @@
 	<title>Lewdum</title>
 </head>
 
-<body class="bg-indigo-900 text-indigo-100 font-ubuntu trans">
-	<main class="min-h-screen p-2 md:p-4">
-		<div class="space-y-4 max-w-5xl mx-auto">
-	<div class="flex flex-col gap-4 lg:flex-row">
+<body class="
+	bg-win-desktop text-win-box-text font-win
+	flex flex-col min-h-screen
+">
+	<!-- TODO: Make menu into desktop icons. -->
 
-		<div class="bg-black bg-opacity-50 p-4 lg:order-1 border border-slate-900 rounded-md">
-			<div class="mx-auto max-w-3xl">
-				<div class="flex flex-col items-center gap-4 py-8">
-					<img src="https://assets.tech.lgbt/accounts/avatars/109/322/240/179/307/532/original/3ed961f02d229782.png"
-						alt="avatar" width="158" height="158" class="rounded-full bg-black">
+	<header class="
+		flex p-[2px]
+		bg-win-box border-[2px]
+		border-t-win-box-border1
+		border-r-win-box-border2
+		border-b-win-box-border2
+	">
+		<a href="&#x2F;" class="px-2 py-1 underline text-win-box-title">
+	Home
+</a>
+		<a href="&#x2F;about.html" class="px-2 py-1 underline text-win-box-title">
+	About
+</a>
+		<a href="&#x2F;blog.html" class="px-2 py-1 underline text-win-box-title">
+	Blog
+</a>
+		<a href="&#x2F;links.html" class="px-2 py-1 underline text-win-box-title">
+	Links
+</a>
+	</header>
 
-					<h1 class="text-4xl font-bold">
-						Lewdum
-					</h1>
-
-					<ul class="flex gap-4 md:text-xl"><li>
-	<span class="mr-2"><img src="emoji/agender_flag.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>they/them</li><li>
-	<span class="mr-2"><img src="emoji/asexual_flag.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>(gray-)ace</li><li>
-	<span class="mr-2"><img src="emoji/surprised.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>adhd-pi</li></ul>
-
-					<ul class="flex gap-4 md:text-xl"><li>
-	<span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span><a href="https://tech.lgbt/@lewdum" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="me noreferrer noopener">fedi</a></li><li>
-	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span><a href="https://codeberg.org/lewdum" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="me noreferrer noopener">codeberg</a></li><li>
-	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span><a href="https://github.com/lewdum" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="me noreferrer noopener">github</a></li></ul>
-				</div>
+	<div class="flex-1 flex flex-col justify-center items-center p-2">
+		<main class="
+			max-w-4xl
+			bg-win-box border-[2px]
+			border-t-win-box-border1
+			border-r-win-box-border2
+			border-b-win-box-border2
+			border-l-win-box-border1
+		">
+			<div class="bg-win-box-title text-white font-win-sys font-bold px-4 py-1">
+				Lewdum
 			</div>
 
-			<p>
-				I am lewdum from the internets. you may know me for... nothing.
-				I spend my time making things then forgetting they exist.
-				I have also dropped out of college 3 or 4 times (I've lost count by now).
-				hopefully one day I will find my path.
-			</p>
+			<div class="px-4 py-2">
+				<div class="py-4">
+	<div class="flex flex-col items-center gap-4 pb-4">
+		<img src="https://assets.tech.lgbt/accounts/avatars/109/322/240/179/307/532/original/3ed961f02d229782.png"
+			alt="avatar" width="158" height="158" class="rounded-full bg-black">
 
-			<div class="py-8">
-				<h2 class="text-2xl font-bold mb-2 flex justify-between">
-					<span>
-						pages problems
-					</span>
-					<span>
-						2022-12-07
-					</span>
-				</h2>
-
-				<!-- FIXME: This should be Markdown, but links. -->
-				<p>
-					had a
-					<a href="https://codeberg.org/Codeberg/Community/issues/828" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="noreferrer noopener">problem with codeberg</a>
-					and had to migrate these pages to github. not ideal, but will have to do for now.
-					at least they have support for subfolders and custom deployments.
-					disroot doesn't seem to support pages at all, and vercel won't recognize gitea
-					instances as "third party repositories," so this is what I'm left with...
-				</p>
-			</div>
-		</div>
-
-		<div class="flex flex-col gap-4 shrink-0">
-			<div class="bg-black bg-opacity-50 p-4 border border-slate-900 rounded-md">
-				<h2 class="text-2xl font-bold mb-4">
-					interests
-				</h2>
-				<ul class="space-y-1">
-					<li><span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>programming
-						<ul class="pl-4"><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>rust</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>go</li></ul>
-					</li><li>
-	<span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>linguistics</li><li><span class="mr-2"><img src="emoji/tv.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>anime
-						<ul class="pl-4"><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>serial experiments lain</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>steins;gate</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>oregairu</li></ul>
-					</li>
-					<li><span class="mr-2"><img src="emoji/tv.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>animation
-						<ul class="pl-4"><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>steven universe</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>cyberpunk edgerunners</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>arcane</li></ul>
-					</li><li>
-	<span class="mr-2"><img src="emoji/gamepad.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>video games</li><li>
-	<span class="mr-2"><img src="emoji/thinking.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>philosophy</li><li>
-	<span class="mr-2"><img src="emoji/music_note.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>music</li></ul>
-			</div>
-
-			<div class="bg-black bg-opacity-50 p-4 border border-slate-900 rounded-md">
-				<h2 class="text-2xl font-bold mb-4">
-					activities
-				</h2>
-				<ul class="space-y-1"><li>
-	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>coding random shit in rust</li><li>
-	<span class="mr-2"><img src="emoji/shinto_shrine.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>studying japanese</li><li>
-	<span class="mr-2"><img src="emoji/wrench.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>reverse engineering games</li><li>
-	<span class="mr-2"><img src="emoji/crazy.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>losing my marbles</li><li>
-	<span class="mr-2"><img src="emoji/pizza.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span>eating pizza</li></ul>
-			</div>
-
-			<div class="bg-black bg-opacity-50 p-4 border border-slate-900 rounded-md">
-				<h2 class="text-2xl font-bold mb-4">
-					links
-				</h2>
-				<ul class="space-y-1"><li>
-	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline h-[1.1em] pb-[1px]"></span><a href="/apps/term" class="text-yellow-400 hover:bg-yellow-400 hover:text-black">termlewd (wip)</a></li></ul>
-			</div>
-
-			<div class="bg-black bg-opacity-50 p-4 border border-slate-900 rounded-md">
-				<img src="../assets/place_him2.png" alt="cute fat cat (?)" title="taken from https://remiiiiii.online/jammers/"
-					width="200" height="160" class="max-w-sm mx-auto">
-			</div>
-		</div>
-
+		<h1 class="text-4xl font-bold">
+			Lewdum
+		</h1>
 	</div>
 
-	<div class="bg-black bg-opacity-50 p-4 text-center space-y-2 border border-slate-900 rounded-md">
-		<p>
-			Built with
-			<a href="https://codeberg.org/lewdum/kurage" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="noreferrer noopener">Kurage</a>, my own free and open source static site generator.
-		</p>
-		<p>
-			Uses
-			<a href="https://mutant.tech" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="noreferrer noopener">Mutant Standard emoji</a>, which are licensed under a
-			<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-yellow-400 hover:bg-yellow-400 hover:text-black" target="_blank"
-	rel="noreferrer noopener">CC BY-NC-SA 4.0 International License</a></a>.
-		</p>
+	<div class="flex flex-col gap-4 pb-8 pl-4 sm:items-center sm:pl-0">
+		<ul class="flex flex-col gap-2 text-xl sm:flex-row sm:gap-4"><li>
+	<span class="mr-2"><img src="emoji/agender_flag.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>they/them</li><li>
+	<span class="mr-2"><img src="emoji/asexual_flag.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>(gray-)ace</li><li>
+	<span class="mr-2"><img src="emoji/surprised.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>adhd-pi</li></ul>
+
+		<ul class="flex flex-col gap-2 text-xl sm:flex-row sm:gap-4"><li>
+	<span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span><a href="https://tech.lgbt/@lewdum" class="underline text-win-box-title" target="_blank" rel="me noreferrer noopener">fedi</a></li><li>
+	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span><a href="https://codeberg.org/lewdum" class="underline text-win-box-title" target="_blank" rel="me noreferrer noopener">codeberg</a></li><li>
+	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span><a href="https://github.com/lewdum" class="underline text-win-box-title" target="_blank" rel="me noreferrer noopener">github</a></li></ul>
 	</div>
 
+	<p>
+		I am Lewdum from the internets. You may know me for... nothing.
+		I spend my time making things then forgetting they exist.
+		I've migrated to the Fediverse due to concerns about monopoly and centralization.
+		This was also my first opportunity to experiment with an LGBT identity among real people.
+		I've even made several friends along the way!
+	</p>
 </div>
-	</main>
+			</div>
+		</main>
+	</div>
+
+	<footer class="
+		text-center py-1
+		bg-win-box border-[2px]
+		border-t-win-box-border1
+		border-r-win-box-border2
+		border-b-win-box-border2
+	">
+		Built with
+		<a href="https://codeberg.org/lewdum/kurage" class="underline text-win-box-title" target="_blank" rel="noreferrer noopener">Kurage</a>, my own free and open source static site generator. Uses
+		<a href="https://mutant.tech" class="underline text-win-box-title" target="_blank" rel="noreferrer noopener">Mutant Standard emoji</a>, which are licensed under a
+		<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="underline text-win-box-title" target="_blank" rel="noreferrer noopener">BY-NC-SA 4.0 International License</a>.
+	</footer>
 </body>
 
 </html>
