@@ -38,3 +38,12 @@
 	{{ label }}
 </a>
 {%- endmacro -%}
+
+{%- macro menu_btn(label, event, disabled="false") -%}
+<button class="
+	px-2 py-1 underline text-win-box-title
+	disabled:no-underline disabled:text-win-box-disabled
+" @click="{{ event }}" :disabled="{{ disabled }}">
+	{{ label }}
+</button>
+{%- endmacro -%}
