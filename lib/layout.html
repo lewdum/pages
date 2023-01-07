@@ -11,13 +11,13 @@
 	<title>{{ title }}</title>
 
 	<!-- Custom Scripts -->
-	<script defer src="/script.js"></script>
+	<!-- <script defer src="/script.js"></script> -->
 
 	<!-- Alpine Plugins -->
-	<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script> -->
 
 	<!-- Alpine Core -->
-	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 
 	{%- block head %}{%- endblock head %}
 </head>
@@ -25,7 +25,7 @@
 <body class="
 	bg-win-desktop text-win-box-text font-win
 	flex flex-col min-h-screen
-" x-data :style="{ 'background-color': $store.global.bgColor }">
+">
 	<!-- TODO: Make menu into desktop icons. -->
 
 	<header class="
@@ -40,15 +40,7 @@
 		{{ macros::menu_link(label="Blog", href="/blog.html") }}
 		{{ macros::menu_link(label="Links", href="/links.html") }}
 
-		<div class="flex-1"></div>
-
-		<div class="hidden sm:flex">
-			{{ macros::menu_btn(label="Reset",
-			event="$store.global.bgColor = defaultBgColor",
-			disabled="$store.global.bgColor === defaultBgColor") }}
-
-			<input type="color" x-model="$store.global.bgColor">
-		</div>
+		<!-- <div class="flex-1"></div> -->
 	</header>
 
 	<div class="flex-1 flex flex-col justify-center items-center p-2">

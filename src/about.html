@@ -19,14 +19,19 @@
 					{{- macros::emoji_item(label="go", emoji="arrow_right") -}}
 				</ul>
 			</li>
-			{{- macros::emoji_item(label="linguistics", emoji="speech_bubble") -}}
+			<li>
+				{{- macros::raw_emoji_item(name="speech_bubble") -}}
+				linguistics
+				<ul class="pl-4">
+					{{- macros::emoji_item(label="know en/pt", emoji="arrow_right") -}}
+					{{- macros::emoji_item(label="learning jp/fr", emoji="arrow_right") -}}
+				</ul>
+			</li>
 			<li>
 				{{- macros::raw_emoji_item(name="tv") -}}
 				anime
 				<ul class="pl-4">
 					{{- macros::emoji_item(label="serial experiments lain", emoji="arrow_right") -}}
-					{{- macros::emoji_item(label="steins;gate", emoji="arrow_right") -}}
-					{{- macros::emoji_item(label="oregairu", emoji="arrow_right") -}}
 				</ul>
 			</li>
 			<li>
@@ -49,8 +54,8 @@
 			Activities
 		</h2>
 		<ul class="space-y-1">
-			{{- macros::emoji_item(label="coding random shit in rust", emoji="crt_prompt") -}}
-			{{- macros::emoji_item(label="studying japanese", emoji="shinto_shrine") -}}
+			{{- macros::emoji_item(label="shitposting", emoji="speech_bubble") -}}
+			{{- macros::emoji_item(label="writing compilers/interpreters", emoji="crt_prompt") -}}
 			{{- macros::emoji_item(label="reverse engineering games", emoji="wrench") -}}
 			{{- macros::emoji_item(label="losing my marbles", emoji="crazy") -}}
 			{{- macros::emoji_item(label="eating pizza", emoji="pizza") -}}

@@ -14,16 +14,18 @@
 
 	<div class="flex flex-col gap-4 pb-6 pl-4 sm:items-center sm:pl-0">
 		<ul class="flex flex-col gap-2 text-xl sm:flex-row sm:gap-4">
-			{{- macros::emoji_item(label="they/them", emoji="agender_flag") -}}
-			{{- macros::emoji_item(label="(gray-)ace", emoji="asexual_flag") -}}
-			{{- macros::emoji_item(label="adhd-pi", emoji="surprised") -}}
+			{{- macros::emoji_item(label="they/them", emoji="nonbinary_flag") -}}
+			{{- macros::emoji_item(label="acespec", emoji="asexual_flag") -}}
+			{{- macros::emoji_item(label="neurodivergent", emoji="surprised") -}}
 		</ul>
 
 		<ul class="flex flex-col gap-2 text-xl sm:flex-row sm:gap-4">
-			{{- macros::emoji_item(label=macros::me_link(label="fedi 1", href="https://tech.lgbt/@lewdum"),
-			emoji="speech_bubble") -}}
-			{{- macros::emoji_item(label=macros::me_link(label="fedi 2", href="https://snug.moe/@lewdum"),
-			emoji="speech_bubble") -}}
+			<li>
+				{{- self::raw_emoji_item(name="speech_bubble", alt="speech_bubble") -}}
+				{{- macros::me_link(label="fediverse", href="https://tech.lgbt/@lewdum") }}
+				({{- macros::me_link(label="alt", href="https://snug.moe/@lewdum") -}})
+			</li>
+
 			{{- macros::emoji_item(label=macros::me_link(label="codeberg", href="https://codeberg.org/lewdum"),
 			emoji="crt_prompt") -}}
 		</ul>
@@ -32,8 +34,8 @@
 	<p>
 		I am Lewdum from the Internets. You may know me for... nothing.
 		I spend my time making things then forgetting they exist.
-		Sometimes I also play games and/or watch anime. Most times I nap instead.
-		Fedi was my first opportunity to experiment with a queer identity among real people.
+		Sometimes I also play games and/or watch stuff. Most times I nap instead.
+		Fedi has been my first opportunity to experiment with a queer identity among real people.
 		I've even made several friends along the way!
 	</p>
 </div>
