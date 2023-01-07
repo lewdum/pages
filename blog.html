@@ -9,19 +9,19 @@
 	<title>Lewdum - Blog</title>
 
 	<!-- Custom Scripts -->
-	<script defer src="/script.js"></script>
+	<!-- <script defer src="/script.js"></script> -->
 
 	<!-- Alpine Plugins -->
-	<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script> -->
 
 	<!-- Alpine Core -->
-	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 </head>
 
 <body class="
 	bg-win-desktop text-win-box-text font-win
 	flex flex-col min-h-screen
-" x-data :style="{ 'background-color': $store.global.bgColor }">
+">
 	<!-- TODO: Make menu into desktop icons. -->
 
 	<header class="
@@ -44,18 +44,7 @@
 	Links
 </a>
 
-		<div class="flex-1"></div>
-
-		<div class="hidden sm:flex">
-			<button class="
-	px-2 py-1 underline text-win-box-title
-	disabled:no-underline disabled:text-win-box-disabled
-" @click="$store.global.bgColor = defaultBgColor" :disabled="$store.global.bgColor === defaultBgColor">
-	Reset
-</button>
-
-			<input type="color" x-model="$store.global.bgColor">
-		</div>
+		<!-- <div class="flex-1"></div> -->
 	</header>
 
 	<div class="flex-1 flex flex-col justify-center items-center p-2">
@@ -74,6 +63,18 @@
 			<div class="px-4 py-2">
 				<div class="p-4">
 	<table class="border-separate border-spacing-2">
+		<tr>
+			<td class="font-bold">
+				2023-01-07
+			</td>
+			<td>
+				&mdash;
+			</td>
+			<td>
+				Updated some text, removed JS lol
+			</td>
+		</tr>
+
 		<tr>
 			<td class="font-bold">
 				2022-12-10

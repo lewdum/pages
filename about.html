@@ -9,19 +9,19 @@
 	<title>Lewdum - About</title>
 
 	<!-- Custom Scripts -->
-	<script defer src="/script.js"></script>
+	<!-- <script defer src="/script.js"></script> -->
 
 	<!-- Alpine Plugins -->
-	<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script> -->
 
 	<!-- Alpine Core -->
-	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 </head>
 
 <body class="
 	bg-win-desktop text-win-box-text font-win
 	flex flex-col min-h-screen
-" x-data :style="{ 'background-color': $store.global.bgColor }">
+">
 	<!-- TODO: Make menu into desktop icons. -->
 
 	<header class="
@@ -44,18 +44,7 @@
 	Links
 </a>
 
-		<div class="flex-1"></div>
-
-		<div class="hidden sm:flex">
-			<button class="
-	px-2 py-1 underline text-win-box-title
-	disabled:no-underline disabled:text-win-box-disabled
-" @click="$store.global.bgColor = defaultBgColor" :disabled="$store.global.bgColor === defaultBgColor">
-	Reset
-</button>
-
-			<input type="color" x-model="$store.global.bgColor">
-		</div>
+		<!-- <div class="flex-1"></div> -->
 	</header>
 
 	<div class="flex-1 flex flex-col justify-center items-center p-2">
@@ -85,12 +74,15 @@
 				<ul class="pl-4"><li>
 	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>rust</li><li>
 	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>go</li></ul>
-			</li><li>
-	<span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>linguistics</li><li><span class="mr-2"><img src="emoji/tv.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>anime
+			</li>
+			<li><span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>linguistics
 				<ul class="pl-4"><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>serial experiments lain</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>steins;gate</li><li>
-	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>oregairu</li></ul>
+	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>know en/pt</li><li>
+	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>learning jp/fr</li></ul>
+			</li>
+			<li><span class="mr-2"><img src="emoji/tv.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>anime
+				<ul class="pl-4"><li>
+	<span class="mr-2"><img src="emoji/arrow_right.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>serial experiments lain</li></ul>
 			</li>
 			<li><span class="mr-2"><img src="emoji/tv.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>animation
 				<ul class="pl-4"><li>
@@ -108,8 +100,8 @@
 			Activities
 		</h2>
 		<ul class="space-y-1"><li>
-	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>coding random shit in rust</li><li>
-	<span class="mr-2"><img src="emoji/shinto_shrine.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>studying japanese</li><li>
+	<span class="mr-2"><img src="emoji/speech_bubble.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>shitposting</li><li>
+	<span class="mr-2"><img src="emoji/crt_prompt.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>writing compilers/interpreters</li><li>
 	<span class="mr-2"><img src="emoji/wrench.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>reverse engineering games</li><li>
 	<span class="mr-2"><img src="emoji/crazy.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>losing my marbles</li><li>
 	<span class="mr-2"><img src="emoji/pizza.webp" alt="" class="inline -mt-[3px]" width="18" height="18"></span>eating pizza</li></ul>
